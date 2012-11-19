@@ -1,0 +1,9 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}
+\contentsline {section}{\numberline {3}Durchf\"uhrung}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Versuch zur Fourier-Analyse}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Versuch zur Fourier-Synthese}{4}{subsection.3.2}
+\contentsline {section}{\numberline {4}Anhang}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Abbildung zum Versuch zur Fourier-Analyse}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Abbildung zum Versuch zur Fourier-Synthese}{6}{subsection.4.2}

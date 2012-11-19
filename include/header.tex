@@ -1,0 +1,103 @@
+%Dokumentenklasse festlegen
+\documentclass[paper=a4,titlepage]{scrartcl}
+
+%Deutsche Spracheinstellungen
+\usepackage[ngerman]{babel, varioref}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+
+%Mathematik Pakete
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amstext}
+
+%Programme
+\usepackage{listings}
+\lstset{literate=%
+ {Ö}{{\"O}}1 
+ {Ä}{{\"A}}1 
+ {Ü}{{\"U}}1 
+ {ß}{{\ss}}2 
+ {ü}{{\"u}}1 
+ {ä}{{\"a}}1 
+ {ö}{{\"o}}1
+ }
+
+%Zitate
+\usepackage{cite}
+
+%Lange Tabellen sehen gut aus
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\usepackage{prettyref}
+
+%Formatiert URLs
+\usepackage{url}
+\urlstyle{tt}
+
+%Kontrollstrukturen laden
+\usepackage{ifthen}
+
+%Bilder
+\usepackage{graphicx}
+
+%\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+%\usepackage{pst-grad} % For gradients
+%\usepackage{pst-plot} % For axes
+
+%Für die E-Mail-Adressen auf der Titelseite
+\usepackage{footnpag}
+
+%Links erlauben
+\usepackage{hyperref}
+
+%Einheitenklammern
+\usepackage[ 
+    separate-uncertainty  = true, 
+    mode = text, 
+    output-decimal-marker={.}, 
+    repeatunits           = false, 
+    range-phrase          = {\,bis\,}, 
+]{siunitx}
+
+%Kleiner Fix für psychologische Probleme mit dem Totenkreuz des 'Thanks'-Befehls
+%Quelle: http://www.apfeltalk.de/forum/latex-thanks-titlepage-t94078.html
+\makeatletter
+\renewcommand{\@fnsymbol}[1]{\ensuremath{%
+   \ifcase#1\or *\or **\or {**}*\or
+   \mathsection\or \mathparagraph\or \|\or \star\or
+   \star\star\or {\star\star}\star \else\@ctrerr\fi}}
+\makeatother
+
+%Hübsche Vektorpfeile mit vv{}
+\usepackage{esvect}
+
+%Einige Abkürzungen für die Mathematik
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+\newcommand{\GNU}{{\sc{GNU}}Plot} % Sollte nicht mehr verwendet werden, besser \kap (Kapitälchen)
+\newcommand{\kap}[1]{{\sc{#1}}}
+
+%\pic{filename.png}{desc}{label}{scale}
+\newcommand{\pic}[4]{
+    \begin{figure}[hptb]
+      \begin{center}
+	\includegraphics[width=#4\textwidth]{#1}
+      \end{center}
+      \caption{#2}
+      \label{#3}
+    \end{figure}
+}
+
+
+%Neue Formel-Nummerierung
+\renewcommand{\theequation}{\arabic{section}.\arabic{subsection}.\arabic{equation}}
+
+%Chem. Formel
+\newcommand{\chem}[3]{${}^{#2}_{#3}\text{#1}$}

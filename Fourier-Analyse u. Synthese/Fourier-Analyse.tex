@@ -1,0 +1,56 @@
+\input{../include/header.tex}
+\input{../include/titlepage.tex}
+
+\begin{document}
+
+\myTitlepage{351}{Fourier-Analyse und Synthese}{09.11.2012}
+
+\section{Einleitung}
+Periodische Funktionen lassen sich nach dem Fourierschen Theorem immer in Sinus- und Cosinus-Funktionen zerlegen. In diesem Versuch sollen periodische, elektrische Schwingungen in ihre Fourier-Komponenten zerlegt werden und die Ergebnisse mit dem theoretischen Werten mit Hilfe des Fourierschen Theorems verglichen werden. Umgekehrt sollen durch Überlagerung von Sinus-Funktionen bestimmte Schwingungen, wie die Sägezahn-Schwingung, erzeugt werden.
+\section{Theorie}
+Um die Fourierkoeffizienten zu untersuchen, wird die zeitabhängigen Funktionen zunächst in den Frequenzraum transformiert. Dazu wird die Fouriertransformation benutzt:
+\begin{equation}
+g(v)=\int_{-\infty}^{\infty}f(t)e^{-ivt}dv\label{fourier1}
+\end{equation}
+Im Frequenzraum lassen sich die einzelnen Fourierkomponenten untersuchen. Die Fouriertransformation hat den Nachteil, dass man in der Praxis nicht über einen unendlichen Zeitraum integrieren kann, was dazu führt, dass keinen diskreten Maxima entstehen die von Nebenmaxima begleitet werden. Damit die gemessenen Fourierkoeffizenten mit den theoretischen Werten verglichen werden können, müssen die Theoriewerte bestimmen werden. Diese lassen sich mit Hilfe des Fourierschen Theorems bestimmen:
+\begin{equation}
+S_f(t)=\frac{a_0}{2}+\sum^{\infty}_{n=}(a_n cos (n\dfrac{2\pi}{T}t) + b_n sin (n \dfrac{2\pi}{T}t))
+\end{equation}
+Für die Koeffizienten $a_n$ und $b_n$ gilt:
+\begin{equation}
+a_n = \frac{2}{T}\int^{T}_{0}f(t)cos(n\dfrac{2\pi}{T}t)dt
+\end{equation}
+\begin{equation}
+b_n = \frac{2}{T}\int^{T}_{0}f(t)sin(n\dfrac{2\pi}{T}t)dt
+\end{equation}
+In diesem Versuch werden die drei Signale Rechteckspannung, Sägezahn- und Dreiecksspannung untersucht. Durch das Fouriersche Theorem lassen sich die Koeffizienten errechnen.
+Für die Rechteckspannung gilt:
+\begin{equation}
+S_f(t) = A (\dfrac{sin(t)}{1}+\dfrac{sin(3t)}{3}+\dfrac{sin(5t)}{5}+...)
+\end{equation}
+A, B und C sind Konstanten und sind von der Amplitude der Schwingung abhängig. Der erste Term steht für die Grundschwingung und die folgenden für die jeweilige Oberschwingung. Bei der Rechteckspannung treten weitere Maxima bei der dreifachen (5, 7, 9,...) Frequenz auf, die Amplitude der Frequenzen soll um den Faktor drei (5, 7, 9...) geringer sein. Für geradzahlige Vielfache der Grundfrequenz sollten keine Maxima auftreten.
+Für die Sägezahnspannung gilt:
+\begin{equation}
+S_f(t) = B (\dfrac{sin(t)}{1}+\dfrac{sin(t)}{2}+\dfrac{sin(3t)}{3}+...)
+\end{equation}
+Bei der Sägezahnspannung treten weitere Maxima bei der doppelten (3, 4, 5,...) Frequenz auf, die Amplitude der Frequenzen soll um den Faktor zwei (3, 4, 5...) geringer sein.
+
+Für die Dreiecksspannung gilt:
+\begin{equation}
+S_f(t) = C (\dfrac{cos(t)}{1^2}+\dfrac{cos(3t)}{3^2}+\dfrac{cos(5t)}{5^2}+...)
+\end{equation}
+Bei Dreiecksspannung treten weitere Maxima bei der dreifachen (5, 7, 9,...) Frequenz auf, die Amplitude der Frequenzen soll um den Faktor $3^2 (5^2, 7^2, 9^2,...)$ geringer sein. Für geradzahlige Vielfache der Grundfrequenz sollten keine Maxima auftreten.\\
+Mit den Koeffizenten werden Vergleiche zwischen Theorie und Praxis durchführt. 
+\section{Durchführung}
+\subsection{Versuch zur Fourier-Analyse}
+Im ersten Teil des Versuchs, wird die Fourier-Transformation untersucht. Mittels einer Schaltung, bestehend aus regelbarem Funktionsgenerator und Oszilloskop(Abbildung 1 im Anhang),lässt sich eine solche Betrachtung durchführen. Mit dem Funktionsgenerator wird eine Signalspannung erzeugt, die mit dem Oszilloskop dargestellt werden kann. Auf dem Oszilloskop wird außerdem die Fouriertransformation angezeigt. Mit Hilfe des Cursors des Oszilloskops lassen sich nun die benötigten Maxima der Amplituden der Oberwellen ausmessen.
+\subsection{Versuch zur Fourier-Synthese}
+Im zweiten Teil des Versuchs, wird eine Fourier-Synthese ausgeführt. Es kommt eine Schaltung aus Oberwellengenerator und Oszilloskop zum Einsatz, außerdem wird ein AC- Millivoltmeter eingesetzt(Abbildung im Anhang). Zuerst muss der Oberwellengenerator justiert werden. Zur Kontrolle der Phasenbeziehung der Fourier-Komponenten wird die erste Oberwelle auf den einen und die n-te Oberwelle auf den zweiten Eingang des Oszillographen gegeben, schaltet man nun auf den Zwei-Kanal-Betrieb schaltet, erscheint eine geschlossene Kurve auf dem Bildschirm, die sich Lissajous-Figur nennt. Durch Phasenverschiebung lässt sich die geschlossene Kurve zu einer Kurve mit zwei Endpunkten entarten. Bei ungeradem n hat sich so die Phase 0 oder $\pi$ eingestellt. Bei geraden n und Sinus-Funktionen ist das Verhältnis umgekehrt und es stellt sich bei einer Phase von 0 oder $\pi$ die Lissajous-Figur ein. Sind alle Oberwellen in Phase, müssen mit Hilfe des AC-Mullivoltmeters die Amplituden gemäß der Fourier-Koeffizienten eingestellt werden um die Justierung des Oberwellengenerators abzuschließen. Nun werden Oberwellengenerator und Oszillograph wieder verbunden. Durch Stück weises Zuschalten einzelner Oberwellen lässt sich eine Überlagerungsfigur beobachten die sich der tatsächlichen Kurve annähert. Ist keine weitere Annäherung möglich wird ein Screenshot gemacht und die nächste Signalspannung eingestellt.
+
+\newpage
+\section{Anhang}
+\subsection{Abbildung zum Versuch zur Fourier-Analyse}
+\pic{Schaltung1.eps}{Schematische Darstellung des Versuchsaufbaus zur Fourier-Analyse.}{pic:aufbau1}{1}
+\subsection{Abbildung zum Versuch zur Fourier-Synthese}
+\pic{Schaltung2.eps}{Schematische Darstellung des Versuchsaufbaus zur Fourier-Synthese.}{pic:aufbau2}{1}
+\end{document}

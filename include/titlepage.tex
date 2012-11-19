@@ -1,0 +1,18 @@
+%Namen der Autoren
+\newcommand{\flo}{Florian Reiche\thanks{\href{florian.reiche@tu-dortmund.de}{florian.reiche@tu-dortmund.de}}}
+\newcommand{\jus}{Justin Grewe\thanks{\href{justin.grewe@tu-dortmund.de}{justin.grewe@tu-dortmund.de}}}
+
+%Titelseite und Inhaltsverzeichnis generieren
+\newcommand{\myTitlepage}[3]
+{
+\title{Protokoll zum Versuch Nr.{#1}: {#2}}
+\author%{\flo \and \jus}
+{Justin Grewe\\
+{justin.grewe@tu-dortmund.de}
+\and Florian Reiche\\
+{florian.reiche@tu-dortmund.de}}
+\date{#3}
+\maketitle
+\tableofcontents
+\newpage
+}
